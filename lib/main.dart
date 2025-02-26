@@ -1,43 +1,57 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(MisIconosAPP());
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-  // This widget is the root of your application.
+class MisIconosAPP extends StatelessWidget {
+  const MisIconosAPP({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // Application name
-      title: 'Flutter Hello World',
-      // Application theme data, you can set the colors for the application as
-      // you want
-      theme: ThemeData(
-        // useMaterial3: false,
-        primarySwatch: Colors.blue,
-      ),
-      // A widget which will be started on application startup
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
-}
-
-class MyHomePage extends StatelessWidget {
-  final String title;
-  const MyHomePage({super.key, required this.title});  
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        // The title text which will be shown on the action bar
-        title: Text(title),
-      ),
-      body: Center(
-        child: Text(
-          'Hello, World!',
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text("Angel Garcia"),
+          titleTextStyle: TextStyle(color: Color(0xb3050505), fontSize: 20),
+          centerTitle: true,
+          backgroundColor: Colors.lime,
+        ),
+        body: const Column(
+          children: <Widget>[
+            Text("Angel Garcia Mat:22308051281193",
+                style: TextStyle(color: Color(0xb3050505), fontSize: 25)),
+            SizedBox(
+              height: 100,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: <Widget>[
+                Icon(
+                  Icons.link,
+                  color: Color(0xff1f10ec),
+                  size: 24.0,
+                  semanticLabel: 'Text to announce in accessibility modes',
+                ),
+                Icon(
+                  Icons.audiotrack,
+                  color: Colors.green,
+                  size: 30.0,
+                ),
+                Icon(
+                  Icons.beach_access,
+                  color: Color(0xff7fa9cb),
+                  size: 36.0,
+                ),
+                Icon(
+                  Icons.zoom_in,
+                  color: Colors.blue,
+                  size: 36.0,
+                ),
+              ],
+            ),
+          ],
         ),
       ),
     );
-  }
-}
+  } //finwidgets
+} // fin clase MisIconosAPP
